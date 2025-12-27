@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ====================================
+        // 1. INTRODUCTION
+        // ====================================
+
+        // Variable & Data Type
+        let name = "Mariyah Alqibthiyah";  // String
+        let age = 10;                      // Integer
+        let is_student = true;             // Boolean
+
+        // Operator
+        let penjumlahan = 5 + 3;
+        let perbandingan = age > 13;       // > , < , == , >= , <= , !=
+        let logika = is_student || (age > 20);
+        let cek = age !== 12;              // !=
+
+        // Output
+        console.log("Nama Saya Adalah", name);
+        console.log("Umur saya", age, "tahun");
+        console.log("hasil penjumlahan :", penjumlahan);
+        console.log("hasil perbandingan :", perbandingan);
+        console.log("hasil logika :", logika);
+        console.log(cek);
+
+        // ====================================
+        // 2. STRUKTUR DATA
+        // ====================================
+
+        // Array
+        let buah = ["apel", "jeruk", "pisang"];
+        console.log(buah[2]);
+        buah.push("pepaya");
+        console.log(buah);
+
+        // Tuple → pakai array biasa di JS
+        let waktu = [12, 30];
+        console.log("Waktu :", waktu[0]);
+
+        // Object
+        let siswa = {
+        nama: "Jajang",
+        umur: 17
+        };
+        console.log(siswa.nama);
+
+        // Set
+        let kota = new Set(["Bekasi", "Bandung", "Garut", "Tasik", "Bandung"]);
+        console.log("set data :", kota);  // hanya 1 kali tampil untuk data unik
+
+        // Operasi tambahan
+        console.log("Jumlah buah :", buah.length);
+        console.log("Apakah Durian ada di buah?", buah.includes("durian"));
+
+        // ====================================
+        // 3. STRUKTUR KONTROL
+        // ====================================
+
+        let nilai = 75;
+
+        if (nilai >= 95) {
+        console.log("Mumtaz");
+        } else if (nilai >= 80) {
+        console.log("Jayyid Jiddan");
+        } else if (nilai >= 70) {
+        console.log("Jayyid");
+        } else if (nilai >= 60) {
+        console.log("Naqish");
+        } else {
+        console.log("Rosyib");
+        }
+
+        // Perulangan for
+        for (let i = 0; i < 5; i++) {
+        console.log(i + 1, "Soal ke-", i + 1);
+        }
+
+        // Perulangan while
+        let x = 0;
+        while (x < 3) {
+        console.log("Aku Lapar!");
+        x++;
+        }
+
+        // Break & Continue
+        for (let i = 0; i < 10; i++) {
+        if (i === 5) break;
+        if (i === 2) continue;
+        console.log("I code with JavaScript", i);
+        }
+
+        // ====================================
+        // 4. FUNCTION (fungsi)
+        // ====================================
+
+        // tanpa parameter
+        function sapa() {
+        console.log("Hello, welcome to my first apps with JavaScript");
+        }
+
+        sapa();
+        sapa();
+
+        // dengan parameter
+        function addition(a, b) {
+        return a + b;
+        }
+
+        let hasil = addition(500, 250);
+        console.log("Hasil penambahan :", hasil);
+
+        // built-in function
+        let nilai_ujian = [90, 78, 65, 55, 90, 93, 72, 38, 70, 30, 20];
+        let nilai_tertinggi = Math.max(...nilai_ujian);
+        let nilai_terendah = Math.min(...nilai_ujian);
+
+        console.log("Nilai Tertinggi adalah :", nilai_tertinggi);
+        console.log("Nilai Terendah adalah :", nilai_terendah);
+
+        // ====================================
+        // 5. OOP (Object Oriented Programming)
+        // ====================================
+
+        class Siswa {
+        constructor(nama, hobi) {
+            this.nama = nama;
+            this.hobi = hobi;
+        }
+
+        perkenalan() {
+            console.log(`Nama Saya ${this.nama}, Hobi saya ${this.hobi}`);
+        }
+        }
+
+        let siswa1 = new Siswa("John", "Coding");
+        let siswa2 = new Siswa("Jono", "Football");
+
+        siswa1.perkenalan();
+        siswa2.perkenalan();
+
+        // ====================================
+        // 6. Exception Handling
+        // ====================================
+
+        const readline = require("readline").createInterface({
+        input: process.stdin,
+        output: process.stdout
+        });
+
+        readline.question("Silahkan masukan angka : ", (input) => {
+        try {
+            let angka = parseInt(input);
+            if (isNaN(angka)) throw new Error("ValueError");
+            let hasil = 10 / angka;
+            if (!isFinite(hasil)) throw new Error("ZeroDivisionError");
+            console.log(`Hasil pembagian : ${hasil}`);
+        } catch (err) {
+            if (err.message === "ZeroDivisionError") {
+            console.log("Maaf angka kamu tidak bisa dibagi rata!");
+            } else if (err.message === "ValueError") {
+            console.log("Maaf yang kamu masukan bukan angka bulat, coba lagi ya!");
+            } else {
+            console.log("Terjadi kesalahan:", err.message);
+            }
+        } finally {
+            console.log("Selamat kamu berhasil!");
+            readline.close();
+        }
+        });
+
+        // ====================================
+        // 7. File Handling
+        // ====================================
+
+        const fs = require("fs");
+
+        console.log("😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊");
+
+        // Menuliskan / membuat file
+        fs.writeFileSync("data.txt", "Ini baris ketiga.\nIni baris keempat.");
+
+        // Membaca file
+        let isi = fs.readFileSync("data.txt", "utf-8");
+        console.log("Isi file:\n", isi);
+    </script>
+</body>
+</html>

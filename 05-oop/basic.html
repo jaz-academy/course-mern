@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Javascript - OOP</h1>
+    <h3>Object Oriented Programming</h3>
+    <em>Open Console 👉</em>
+    <script>
+      // Membuat class (sketsa)
+      class student {
+        // property : dipanggil saat object dibuat
+        constructor(name, role) {
+          this.name = name;
+          this.role = role;
+        }
+        // method (fungsi di dalam class)
+        sapa() {
+          return `Halo, nama saya ${this.name}, saya seorang ${this.role}`;
+        }
+        // method static : bisa dipanggil langsung tanpa membuat object
+        static help() {
+          return "Class ini digunakan untuk membuat user Student.";
+        }
+      }
+
+      //   Membuat Object Student
+      const student1 = new student("Danar", "Programmer");
+      const student2 = new student("Qiya", "Designer");
+      const student3 = new student("Zava", "Conten Creator");
+
+      //   Menjalankan method static
+      console.log(student.help());
+
+      //   Menjalankan method dari object
+      console.log(student1.sapa());
+      console.log(student2.sapa());
+      console.log(student3.sapa());
+    </script>
+  </body>
+</html>
