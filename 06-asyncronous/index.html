@@ -10,7 +10,18 @@
     <p>Open Console</p>
 
     <!-- <script src="modul/callback.js"></script> -->
-    <script src="modul/promise.js"></script>
-    <!-- <script src="modul/asyncAwait.js"></script> -->
+    <!-- <script src="modul/promise.js"></script> -->
+    <!-- <script src="modul/async_await.js"></script> -->
+    <script>
+      console.log("+++ REST PARAMETER +++");
+      function sum(...params) {
+        let total = 0;
+        for (const param of params) {
+          total += param;
+        }
+        return total;
+      }
+      console.log(sum(70,87,95,68,90));
+    </script>
   </body>
 </html>
