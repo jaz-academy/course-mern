@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Hydrating Facial Cleanser",
+    "price": 75000,
+    "thumbnail": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=500&h=500&fit=crop"
+  },
+  {
+    "id": 2,
+    "title": "Brightening Face Serum",
+    "price": 120000,
+    "thumbnail": "https://images.unsplash.com/photo-1585232351009-aa87416fca90?w=500&h=500&fit=crop"
+  },
+  {
+    "id": 3,
+    "title": "Vitamin C Essence",
+    "price": 98000,
+    "thumbnail": "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=500&h=500&fit=crop"
+  },
+  {
+    "id": 4,
+    "title": "Moisturizing Day Cream",
+    "price": 110000,
+    "thumbnail": "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?w=500&h=500&fit=crop"
+  },
+  {
+    "id": 5,
+    "title": "Night Repair Cream",
+    "price": 135000,
+    "thumbnail": "https://images.unsplash.com/photo-1629198688000-71f23e745b6e?w=500&h=500&fit=crop"
+  },
+  {
+    "id": 6,
+    "title": "Sunscreen SPF 50",
+    "price": 90000,
+    "thumbnail": "https://images.unsplash.com/photo-1598662972299-5408ddb8a3dc?w=500&h=500&fit=crop"
+  },
+  {
+    "id": 7,
+    "title": "Soothing Aloe Gel",
+    "price": 65000,
+    "thumbnail": "https://images.unsplash.com/photo-1615396899839-c99c121888b0?w=500&h=500&fit=crop"
+  },
+  {
+    "id": 8,
+    "title": "Exfoliating Toner",
+    "price": 88000,
+    "thumbnail": "https://images.unsplash.com/photo-1612817159949-195b6eb9e31a?w=500&h=500&fit=crop"
+  },
+  {
+    "id": 9,
+    "title": "Clay Face Mask",
+    "price": 70000,
+    "thumbnail": "https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=500&h=500&fit=crop"
+  },
+  {
+    "id": 10,
+    "title": "Eye Cream Revitalizing",
+    "price": 105000,
+    "thumbnail": "https://images.unsplash.com/photo-1615485925600-97237c4fc1ec?w=500&h=500&fit=crop"
+  }
+]
