@@ -1,8 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { BASE_URL } from "../apiConfig";
+import { CartContext } from "../context/CartContext";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
+  const { addToCart } = useContext(CartContext);
 
   useEffect(() => {
     fetch(BASE_URL)
@@ -20,10 +22,13 @@ export default function Home() {
             <img src={product.thumbnail} className="card-img-top" alt="..." />
             <div className="card-body">
               <h5 className="card-title">{product.title}</h5>
-              <p className="card-text">Rp.</p>
-              <a href="#" className="btn btn-primary">
+              <p className="card-text">{product.price.toLocaleString()}</p>
+              <button
+                className="btn btn-primary"
+                onClick={() => addToCart(product)}
+              >
                 Add to Cart
-              </a>
+              </button>
             </div>
           </div>
         ))}
