@@ -1,0 +1,28 @@
+### PANGGIL SEMUA PRODUCT
+GET http://localhost:3000/api/products
+
+### PANGGIL 1 PRODUK
+GET http://localhost:3000/api/products/15
+
+### TAMBAH PRODUK BARU
+POST http://localhost:3000/api/products
+Content-Type: application/json
+
+{
+    "title": "WHITE POTATO",
+    "price": 0,
+    "thumbnail": "https://"    
+}
+
+### UBAH PRODUK
+PUT http://localhost:3000/api/products/11
+Content-Type: application/json
+
+{
+    "title": "BLACK POTATO",
+    "price": 0,
+    "thumbnail": "https://43214321432143214321"    
+}
+
+### HAPUS PRODUK
+DELETE http://localhost:3000/api/products/11
