@@ -1,0 +1,37 @@
+### PANGGIL SEMUA movie
+GET http://localhost:3000/api/movies
+
+### TAMBAH MOVIE BARU
+POST http://localhost:3000/api/movies
+Content-Type: application/json
+
+{
+    "title": "Cars",
+    "year": 2006,
+    "genres": ["Animation", "Adventure", "Comedy"],
+    "director": "John Lasseter",
+    "banner": "https://43214321432143214321",
+    "trailer": "https://43214321432143214321"
+}
+
+
+
+
+
+
+
+### PANGGIL 1 MOVIE
+GET http://localhost:3000/api/movies/15
+
+### UBAH MOVIE
+PUT http://localhost:3000/api/movies/11
+Content-Type: application/json
+
+{
+    "title": "BLACK POTATO",
+    "price": 0,
+    "thumbnail": "https://43214321432143214321"    
+}
+
+### HAPUS MOVIE
+DELETE http://localhost:3000/api/movies/11
